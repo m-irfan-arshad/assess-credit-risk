@@ -24,9 +24,9 @@ import com.ai.credit.risk.presentation.ui.components.CreditHistorySlider
 import com.ai.credit.risk.presentation.ui.components.DebtRatioSlider
 import com.ai.credit.risk.presentation.ui.components.IncomeSlider
 import com.ai.credit.risk.presentation.ui.components.RiskResultCard
-import com.ai.finrisk.presentation.ui.components.TechnicalDetailsCard
-import com.ai.finrisk.presentation.viewmodel.RiskAssessmentUiState
-import com.ai.finrisk.presentation.viewmodel.RiskAssessmentViewModel
+import com.ai.credit.risk.presentation.ui.components.TechnicalDetailsCard
+import com.ai.credit.risk.presentation.viewmodel.RiskAssessmentUiState
+import com.ai.credit.risk.presentation.viewmodel.RiskAssessmentViewModel
 import com.ai.finrisk.ui.theme.FinRiskTheme
 
 /**

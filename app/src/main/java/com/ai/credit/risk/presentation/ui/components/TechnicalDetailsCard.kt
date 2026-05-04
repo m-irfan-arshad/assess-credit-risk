@@ -1,4 +1,4 @@
-package com.ai.finrisk.presentation.ui.components
+package com.ai.credit.risk.presentation.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

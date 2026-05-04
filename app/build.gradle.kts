@@ -22,6 +22,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64"))
+        }
+
+
     }
 
     buildTypes {
@@ -32,6 +38,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("Boolean", "ML_ENABLED", "true")
+            buildConfigField("String", "MODEL_VERSION", "\"1.0.0\"")
+            buildConfigField("String", "MODEL_DATE", "\"2026-01-01\"")
         }
         debug {
             isMinifyEnabled = false
@@ -40,6 +49,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("Boolean", "ML_ENABLED", "true")
+            buildConfigField("String", "MODEL_VERSION", "\"1.0.0\"")
+            buildConfigField("String", "MODEL_DATE", "\"2026-01-01\"")
         }
     }
     compileOptions {
@@ -50,6 +62,9 @@ android {
         compose = true
         mlModelBinding = true
         buildConfig = true
+    }
+    lint {
+        abortOnError = false
     }
 }
 

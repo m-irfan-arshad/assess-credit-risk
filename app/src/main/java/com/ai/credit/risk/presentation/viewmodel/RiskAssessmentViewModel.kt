@@ -1,4 +1,4 @@
-package com.ai.finrisk.presentation.viewmodel
+package com.ai.credit.risk.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,4 +1,4 @@
-package com.ai.finrisk.presentation.viewmodel
+package com.ai.credit.risk.presentation.viewmodel
 
 import com.ai.credit.risk.domain.model.RiskResult
 
