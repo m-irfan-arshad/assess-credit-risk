@@ -20,8 +20,7 @@ An Android application that uses on-device machine learning to assess credit ris
 ## Recoding
 
 **Screen Recording:**
-
-https://youtube.com/shorts/_gjqSZ7Pvk4?feature=share
+[![Watch the video](https://youtube.com)](https://youtube.com/shorts/_gjqSZ7Pvk4?feature=share)
 
 ## Architecture
 
