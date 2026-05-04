@@ -15,11 +15,14 @@ An Android application that uses on-device machine learning to assess credit ris
 
 |                                                            Approved                                                             |                                                            Review                                                             |                        Rejected                         |
 |:-------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|
-| ![Approved](https://github.com/irfanarshad/assess-credit-risk/blob/main/screenshort/screenshort/Screenshot_20260504_141044.png) | ![Review](https://github.com/irfanarshad/assess-credit-risk/blob/main/screenshort/screenshort/Screenshot_20260504_141053.png) | ![Rejected](https://github.com/irfanarshad/assess-credit-risk/blob/main/screenshort/screenshort/Screenshot_20260504_141111.png) |
+| ![Approved](./screenshort/Screenshot_20260504_141044.png) | ![Review](./screenshort/Screenshot_20260504_141053.png) | ![Rejected](./screenshort/Screenshot_20260504_141111.png) |
 
 ## Recoding
 
 **Screen Recording:**
+
+./screenshort/Screen_recording_20260504_141209.mp4
+
 [![Watch the video](https://youtube.com)](https://youtube.com/shorts/_gjqSZ7Pvk4?feature=share)
 
 ## Architecture
