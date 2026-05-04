@@ -1,0 +1,59 @@
+package com.ai.credit.risk.domain.model
+
+/**
+ * Result of ML-based credit risk assessment.
+ *
+ * Contains the raw probability from the model and the derived business decision.
+ *
+ * @property probability Raw model output (0.0 to 1.0), representing approval likelihood
+ * @property decision Business decision derived from probability thresholds
+ * @property inferenceTimeMicros Time taken for ML inference in microseconds
+ */
+data class RiskResult(
+    val probability: Float,
+    val decision: RiskDecision,
+    val inferenceTimeMicros: Long
+) {
+    companion object {
+        private const val APPROVAL_THRESHOLD = 0.6f
+        private const val REVIEW_THRESHOLD = 0.4f
+
+        /**
+         * Factory method to create [RiskResult] from raw model probability.
+         *
+         * Applies business rules to convert probability into [RiskDecision]:
+         * - >= 60%: APPROVED
+         * - >= 40%: REVIEW
+         * - < 40%: REJECTED
+         *
+         * @param probability Raw model output (will be clamped to 0-1 range)
+         * @param inferenceTimeMicros Time taken for inference
+         * @return [RiskResult] with appropriate decision
+         */
+        fun fromProbability(probability: Float, inferenceTimeMicros: Long): RiskResult {
+            val clampedProbability = probability.coerceIn(0f, 1f)
+            val decision = when {
+                clampedProbability >= APPROVAL_THRESHOLD -> RiskDecision.APPROVED
+                clampedProbability >= REVIEW_THRESHOLD -> RiskDecision.REVIEW
+                else -> RiskDecision.REJECTED
+            }
+            return RiskResult(
+                probability = clampedProbability,
+                decision = decision,
+                inferenceTimeMicros = inferenceTimeMicros
+            )
+        }
+
+        /**
+         * Returns a safe default result when the ML model is unavailable.
+         *
+         * Returns REVIEW (manual review required) rather than crashing
+         * the app or making a decision without ML confidence.
+         */
+        fun fallback(): RiskResult = RiskResult(
+            probability = 0.5f,
+            decision = RiskDecision.REVIEW,
+            inferenceTimeMicros = 0L
+        )
+    }
+}
