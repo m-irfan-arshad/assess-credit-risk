@@ -20,8 +20,8 @@ An Android application that uses on-device machine learning to assess credit ris
 ## Recoding
 
 **Screen Recording:**
+![Fin Credit Risk Demo](./screenshort/Screen_recording_20260504_141209.gif)
 
-./screenshort/Screen_recording_20260504_141209.mp4
 
 [![Watch the video](https://youtube.com)](https://youtube.com/shorts/_gjqSZ7Pvk4?feature=share)
 
