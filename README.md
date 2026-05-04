@@ -21,7 +21,7 @@ An Android application that uses on-device machine learning to assess credit ris
 
 **Screen Recording:**
 
-https://github.com/irfanarshad/assess-credit-risk/blob/main/screenshort/Screen_recording_20260504_141209.mp4
+https://github.com/m-irfan-arshad/assess-credit-risk/blob/main/screenshort/Screen_recording_20260504_141209.mp4
 
 ## Architecture
 
