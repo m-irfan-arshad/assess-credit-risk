@@ -1,11 +1,11 @@
-package com.ai.finrisk.ui.theme
+package com.ai.credit.risk.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+val Purple80 = Color(0xFF4217A8)
+val PurpleGrey80 = Color(0xFF170F25)
+val Pink80 = Color(0xFF9B9194)
 
-val Purple40 = Color(0xFF6650a4)
+val Purple40 = Color(0xFF997DEA)
 val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val Pink40 = Color(0xFFE03A70)

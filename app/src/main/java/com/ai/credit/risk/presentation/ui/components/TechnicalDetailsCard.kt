@@ -45,7 +45,7 @@ fun TechnicalDetailsCard(
                 )
 
                 Text(
-                    text = "  Income:     ${String.format("%.4f", preprocessedFeatures[0])}",
+                    text = "  Income:     ${String.format("%.5f", preprocessedFeatures[0])}",
                     style = MaterialTheme.typography.bodySmall,
                     fontFamily = FontFamily.Monospace
                 )

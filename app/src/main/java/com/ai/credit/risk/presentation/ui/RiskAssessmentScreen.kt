@@ -73,7 +73,7 @@ internal fun RiskAssessmentContent(
     ) {
         // Header
         Text(
-            text = "FinRisk Credit Assessment",
+            text = "Fin Credit Risk (FCR)",
             style = MaterialTheme.typography.headlineSmall,
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.fillMaxWidth()
@@ -218,42 +218,4 @@ private fun RiskAssessmentScreenRejectedPreview() {
         )
     }
 }
-
-@Preview(showBackground = true, showSystemUi = true, name = "Loading State")
-@Composable
-private fun RiskAssessmentScreenLoadingPreview() {
-    FinRiskTheme {
-        RiskAssessmentContent(
-            uiState = RiskAssessmentUiState(
-                income = 60000f,
-                debtRatio = 0.55f,
-                creditHistory = 520,
-                isLoading = true
-            ),
-            onIncomeChange = {},
-            onDebtRatioChange = {},
-            onCreditHistoryChange = {}
-        )
-    }
-}
-
-@Preview(showBackground = true, showSystemUi = true, name = "Error State")
-@Composable
-private fun RiskAssessmentScreenErrorPreview() {
-    FinRiskTheme {
-        RiskAssessmentContent(
-            uiState = RiskAssessmentUiState(
-                income = 60000f,
-                debtRatio = 0.55f,
-                creditHistory = 520,
-                isLoading = false,
-                error = "Failed to load ML model"
-            ),
-            onIncomeChange = {},
-            onDebtRatioChange = {},
-            onCreditHistoryChange = {}
-        )
-    }
-}
-
 // endregion

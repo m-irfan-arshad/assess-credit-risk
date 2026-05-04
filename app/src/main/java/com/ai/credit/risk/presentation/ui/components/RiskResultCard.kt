@@ -58,11 +58,6 @@ fun RiskResultCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            Text(
-                text = "Risk Assessment",
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold
-            )
 
             if (isLoading) {
                 CircularProgressIndicator()
@@ -71,13 +66,6 @@ fun RiskResultCard(
                 RiskScoreGauge(score = riskResult.probability)
 
                 DecisionBadge(decision = riskResult.decision)
-
-                Text(
-                    text = "${(riskResult.probability * 100).roundToInt()}% Approval Probability",
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.Medium
-                )
-
                 Text(
                     text = when (riskResult.decision) {
                         RiskDecision.APPROVED -> "Pre-approved! You can proceed with the application."
@@ -87,7 +75,19 @@ fun RiskResultCard(
                     style = MaterialTheme.typography.bodyMedium,
                     textAlign = TextAlign.Center
                 )
+                Text(
+                    text = "${(riskResult.probability * 100).roundToInt()}% Approval Probability",
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Medium
+                )
+
+
             }
+            Text(
+                text = "Risk Assessment",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold
+            )
         }
     }
 }
@@ -154,11 +154,13 @@ fun DecisionBadge(decision: RiskDecision) {
             Color.White,
             "APPROVED"
         )
+
         RiskDecision.REVIEW -> Triple(
             Color(0xFFFF9800),
             Color.White,
             "NEEDS REVIEW"
         )
+
         RiskDecision.REJECTED -> Triple(
             Color(0xFFF44336),
             Color.White,
